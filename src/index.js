@@ -6,13 +6,13 @@ let scrollSections = [];
 const bodyScrollEl = {};
 
 // For ff, ie
-Object.defineProperty(bodyScrollEl, 'scrollTop', {
+Object.defineProperty(bodyScrollEl, 'scrollLeft', {
     get() {
-        return document.body.scrollTop || document.documentElement.scrollTop;
+        return document.body.scrollLeft || document.documentElement.scrollLeft;
     },
     set(val) {
-        document.body.scrollTop = val;
-        document.documentElement.scrollTop = val;
+        document.body.scrollLeft = val;
+        document.documentElement.scrollLeft = val;
     }
 });
 
@@ -38,7 +38,7 @@ export default function install(Vue) {
         bind: function(el, binding, vnode) {
             function onScroll() {
                 const { scrollEl, expression } = el[scrollSpyContext];
-                const pos = scrollEl.scrollTop;
+                const pos = scrollEl.scrollLeft;
                 let i = 0;
                 while (pos >= scrollSections[i]) {
                     i++;
@@ -49,7 +49,7 @@ export default function install(Vue) {
 
             function scrollTo(index) {
                 const { scrollEl } = el[scrollSpyContext];
-                const current = scrollEl.scrollTop;
+                const current = scrollEl.scrollLeft;
                 const target = scrollSections[index];
                 const time = 200;
                 const steps = 30;
@@ -57,7 +57,7 @@ export default function install(Vue) {
                 const gap = target - current;
                 for (let i = 0; i <= steps; i ++) {
                     const pos = current + (gap / steps) * i;
-                    setTimeout(() => scrollEl.scrollTop = pos, timems * i);
+                    setTimeout(() => scrollEl.scrollLeft = pos, timems * i);
                 }
             }
             vnode.context.$scrollTo = scrollTo;
