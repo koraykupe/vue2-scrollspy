@@ -1,7 +1,7 @@
 {
-  "name": "vue2-scrollspy",
-  "version": "1.1.2",
-  "description": "Scrollspy for Vue2",
+  "name": "vue2-horizontal-scrollspy",
+  "version": "1.0.1",
+  "description": "Horizontal Scrollspy for Vue2",
   "main": "./dist/index.js",
   "scripts": {
     "start": "./node_modules/.bin/babel ./src/index.js -w -o ./dist/index.js",
@@ -10,19 +10,20 @@
   "keywords": [
     "scrollspy",
     "scroll",
+    "horiztontal",
     "vue",
     "vue2"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ibufu/vue2-scrollspy.git"
+    "url": "git+https://github.com/koraykupe/vue2-scrollspy.git"
   },
   "author": "morning",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ibufu/vue2-scrollspy/issues"
+    "url": "https://github.com/koraykupe/vue2-scrollspy/issues"
   },
-  "homepage": "https://github.com/ibufu/vue2-scrollspy#readme",
+  "homepage": "https://github.com/koraykupe/vue2-scrollspy#readme",
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-latest": "^6.16.0",
